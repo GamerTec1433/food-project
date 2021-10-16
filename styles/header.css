@@ -1,0 +1,56 @@
+:root {
+    --main-color: #dc3545;
+    --main-2-color: #9c2531;
+    --dark-color: #343a40;
+}
+
+.left-side {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 200px;
+}
+
+.left-side .active {
+    background-color: var(--main-color);
+}
+
+.left-side .item {
+    height: 50px;
+    font-size: 23px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    transition: background .2s;
+}
+
+.left-side .item * {
+    height: 25px;
+}
+
+.left-side .item .icon {
+    text-align: center;
+    width: 25px;
+}
+
+.left-side .item:hover {
+    text-decoration: none;
+    background: var(--main-2-color);
+    cursor: pointer;
+}
+
+.right-side {
+    margin-left: 200px;
+    transition: margin-left .2s;
+}
+
+@media (max-width: 700px) {
+    .left-side {
+        width: 60px;
+    }
+    .right-side {
+        margin-left: 50px;
+    }
+    .left-side h4 {
+        display: none;
+    }
+}
